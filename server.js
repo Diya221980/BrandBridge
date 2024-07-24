@@ -99,7 +99,7 @@ app.get("/add", function (req, resp) {
         if (err == null) {
             resp.send("Signup Successfully");
         } else {
-            resp.send("Email already exists");  
+            resp.send(err.message);  
         }
     });
 });
